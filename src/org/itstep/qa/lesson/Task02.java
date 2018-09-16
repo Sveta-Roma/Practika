@@ -6,19 +6,16 @@ import java.util.Scanner;
 public class Task02 {
     // Составить программу, которая проверяет знание таблицы умножения и сообщает пользователю результат (верно или нет).
     public static void main(String[] args) {
-        int a = 5;
-        System.out.println (a);
+        System.out.println("Таблица умножения!");
+        System.out.println("Решите пример:");
         Scanner sc = new Scanner(System.in);
-        System.out.println ("Введите число");
+        int a = sc.nextInt();
         int b = sc.nextInt();
-        System.out.println (b);
-        int result = a*b;
-        System.out.println ("Результат: " + result);
-
-        //Scanner sc = new Scanner(System.in);
-        //System.out.println ("Введите результат: ");
-        //int res = sc.nextInt();
-
-
+        System.out.print(a + " * " + b + " = ");
+        int c = sc.nextInt();
+        if (c == a*b) System.out.println("Верно!");
+        else System.out.println("Неверно!");
     }
 }
+
+
