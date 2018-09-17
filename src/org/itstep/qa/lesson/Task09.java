@@ -1,5 +1,6 @@
 package org.itstep.qa.lesson;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task09 {
@@ -15,14 +16,20 @@ public class Task09 {
     Значения соседей: 2, 7, 8, 5
     */
     public static void main(String[] args) {
+        int [][] a;
+        a = new int[3][4];
         Random r = new Random();
-        int [][] a = new int[3][3];
-        for (int i = 0;  i<10; i++){
-            for (int j = 0;  j<10; j++){
-                //a[j] = r.nextInt();
-                //a[i] = r.nextInt();
-
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                    a[i][j] = r.nextInt(20);
             }
+        }
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.println(a[i][j]);
+            }
+            System.out.println();
         }
     }
 }
+
