@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Task09 {
+    // Здесь не выполнены индексы и соседи
     /* Имеется двумерный массив, заполненный случайными значениями. Найти максимальный элемент этого массива. Вывести значение элемента, его индексы, а также значения его соседей в обоих  измерениях
     Пример.
             Массив:
@@ -17,11 +18,11 @@ public class Task09 {
     */
     public static void main(String[] args) {
         int [][] a;
-        a = new int[3][4];
+        a = new int[3][3];
         Random r = new Random();
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
-                    a[i][j] = r.nextInt(20);
+                    a[i][j] = r.nextInt(10);
             }
         }
         for (int i = 0; i < a.length; i++) {
@@ -30,6 +31,16 @@ public class Task09 {
             }
             System.out.println();
         }
+
+        int max = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                    if (a[i][j] > max) {
+                        max = a[i][j];
+                    }
+            }
+        }
+        System.out.println("Максимальный элемент " + max);
     }
 }
 
