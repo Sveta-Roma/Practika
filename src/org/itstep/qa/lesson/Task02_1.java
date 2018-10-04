@@ -1,6 +1,5 @@
 package org.itstep.qa.lesson;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Task02_1 {
